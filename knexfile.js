@@ -1,8 +1,7 @@
-import * as dotenv from 'dotenv';
-dotenv.config()
+require("dotenv").config();
 
 const {
-    DB_CONNECTION,
+    //CLIENT,
     DB_HOST,
     DB_PORT,
     DB_DATABASE,
@@ -12,7 +11,7 @@ const {
 
 module.exports = {
     development: {
-        client: DB_CONNECTION,
+        client: 'mysql2',
         connection: {
             database: DB_DATABASE,
             user: DB_USERNAME,
