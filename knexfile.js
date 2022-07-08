@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const {
-    //CLIENT,
+    CLIENT,
     DB_HOST,
     DB_PORT,
     DB_DATABASE,
@@ -11,7 +11,7 @@ const {
 
 module.exports = {
     development: {
-        client: 'mysql2',
+        client: CLIENT,
         connection: {
             database: DB_DATABASE,
             user: DB_USERNAME,
