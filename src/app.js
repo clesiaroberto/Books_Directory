@@ -1,22 +1,20 @@
 import express from "express";
 import helmet from "helmet";
-import router from "./routes/user";
-import knex from "./database/index";
+import router from "./routes/routes";
+
 
 
 const app = express();
 
 app.use(helmet());
+app.use(express.json());
+app.use(router);
 
-//app.use(router);
 
 
 app.get("/home", async(req, res) => {
 
-    const check = await knex("users").select("*");
-    console.log(check)
-    res.end("Wellcome!");
-    //res.json(JSON.stringify(check));
+    res.end("Wellcome home!");
 });
 
 export { app };

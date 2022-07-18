@@ -1,8 +1,8 @@
 import { Router } from "express";
 import {
-    checkCon,
+    register,
 } from "../controller/user";
 
 export const router = Router();
 
-router.get("/regists", checkCon);
+router.post("/users", register);
